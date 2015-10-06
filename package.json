@@ -1,0 +1,17 @@
+{
+  "name": "async_await_demo",
+  "scripts": {
+    "promise": "babel app/js/src/promise.babel.js --out-file app/js/promise.js",
+    "generator": "babel --optional runtime app/js/src/generator.babel.js --out-file app/js/generator.r.js && browserify app/js/generator.r.js -d -o app/js/generator.js",
+    "async": "babel --optional runtime app/js/src/async.babel.js --out-file app/js/async.r.js && browserify app/js/async.r.js -d -o app/js/async.js",
+    "sleep": "babel --optional runtime app/js/src/sleep.babel.js --out-file app/js/sleep.r.js && browserify app/js/sleep.r.js -d -o app/js/sleep.js",
+    "animate": "babel --optional runtime app/js/src/animate.babel.js --out-file app/js/animate.r.js && browserify app/js/animate.r.js -d -o app/js/animate.js"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-runtime": "^5.8.25"
+  },
+  "dependencies": {
+    "gsap": "^1.18.0"
+  }
+}
